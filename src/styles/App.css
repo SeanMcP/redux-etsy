@@ -33,14 +33,22 @@ h3 {
   width: 100%;
 }
 
-button {
+button.active, button.inactive {
   background-color: grey;
+  border: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
   outline: none;
 }
 
 button.active {
   background-color: lightgrey;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+button.inactive:hover, button.inactive:active {
+  background: #666;
 }
 
 
