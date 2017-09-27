@@ -4,10 +4,9 @@ import {connect} from 'react-redux'
 import Product from "../components/Product";
 
 class ProductList extends Component {
-
     render() {
         const {products} = this.props;
-        console.log('products', products);
+        console.log('this.props', this.props);
         // Create a dynamically populated list of `<Product />` components
         // Each `<Product />` component should have a single object from the `products` state property (array)
         // applied to the component as a `product` property
@@ -34,9 +33,9 @@ const mapStateToProps = function(state) {
     let products;
     // complete the `if else` statement including conditions and `products` value
     if (state.filter === 'underTwenty') {
-      products = state.products;
+      products = state.products.filter(item => Number(item.price) < 20);
     } else if (state.filter === 'overTwenty') {
-      products = state.products;
+      products = state.products.filter(item => Number(item.price) >= 20);
     } else {
       products = state.products;
     }

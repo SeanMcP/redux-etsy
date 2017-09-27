@@ -23,7 +23,7 @@ class FilterProducts extends Component {
               "underTwenty", "Show under $20"
             ],
             [
-              "overTwenty", "Show over $20"
+              "overTwenty", "Show $20 and over"
             ]
         ]
 
