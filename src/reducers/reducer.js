@@ -17,7 +17,7 @@ const reducer = function(state = initialState, action) {
   switch(action.type) {
     case FILTER_PRODUCTS:
       return update(state, {
-        products: { $push: [ action.payload ] }
+        filter: { $set: action.payload }
       });
     default:
       return state;

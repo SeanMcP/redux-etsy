@@ -8,10 +8,10 @@ export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
 // }
 
 const makeActionCreator = function (actionType) {
-  return function (payload) {
+  return function (filterType) {
     return {
       type: actionType,
-      payload: payload
+      payload: filterType
     }
   }
 }
